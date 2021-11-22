@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Festive&family=Fredericka+the+Great&family=Niconne&family=Oleo+Script&family=Pinyon+Script&family=Rye&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+body{
+	background-color: transparent;
+  overflow: hidden;
+}
+
+/* HEADER WITH THE HRADING */
+
+.header2{
+    padding: 15%;
+    width: 100%;
+	height: 65vh;
+	color: white;
+    background: linear-gradient(  rgb(8, 8, 8), rgb(121, 104, 31),  rgb(180, 160, 46), rgb(255, 246, 196), white) ;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+    font-family: 'Birthstone', cursive  !important;
+}
+
+
+/* OUTER BOX HAVING THE MAIN CONTENT */
+
+.outer-box{
+    height: fit-content;
+    padding: 0px 8vw;
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* LEFT BOX WITH IMAGE */
+
+.left-box{
+    height: fit-content;
+}
+
+/* PRODUCT SERVICES COLS */
+
+.pro-service{
+    display: flex;
+    justify-content: flex-end;      /* x-axix */
+    margin-top: 45%;
+    margin-bottom: 15%;
+}
+
+.pro-service-row{
+    display: flex;
+    justify-content: center;
+}
+.pro-service-row i:hover{
+    color: #c5ae50;
+    transition: color .3s;
+}
+
+/* PRODUCT IMAGE */
+
+.pro-img{
+    padding-top: 8%;
+}
+
+/* RIGHT BOX HAVING PRODUCT DESC */
+
+.right-box{
+    padding: 2% 5%;
+    height: fit-content;
+    background: rgba(185, 185, 185, 0.2) ;
+    display: inline-block;
+    padding-bottom: 10%;
+}
+@media (max-width: 770px){
+    .header2{
+        padding-top: 30%;
+    }
+    .right-box .btn{
+        font-size: small;
+    }
+    .vintage-heading{
+        font-size: 5rem !important;
+    }
+}
+@media (min-width: 1025px) {
+    .right-box{
+        height: fit-content;
+        padding-bottom: 10%;
+    }
+}
+@media (max-width: 1025px) {
+    .right-box{
+        padding-bottom: 30%;
+    }
+    .header2{
+        padding-top: 20%;
+    }
+}
+@media (max-width: 770px){
+    .header2{
+        padding-top: 35%;
+    }
+}
+
+
+.off-percent{
+    color: #c5ae50;
+}
+
+/* TRUCK/DELIVERY IMAGE */
+
+.right-box i{
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.right-box h4{
+    display: inline-block;
+}
+
+/* INPUT BOX FOR NUMBER OF ITEMS */
+
+.quantity-input{
+    display: inline-block;
+    font-size: large;
+    padding: 7px;
+    height: 6.5%;
+    width: 15%;
+    margin: 10px 0px;
+    margin-right: 10px;
+}
+
+/* BUTTONS IN RIGHT BOX */
+
+.right-box .btn{
+
+    width: fit-content;
+    height: fit-content;
+}
+
+/* LIST OF SPECIFICATIONS */
+
+.pro-list-box{
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+.pro-list{
+
+    width: fit-content;
+}
+
+.pro-list ul{
+    padding-left: 0%;    
+}
+
+.pro-list li{
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-size: large;
+}
+
+.product-items{
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.product{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 700px) and (max-width: 950px){
+    .product-items{
+        display: grid;
+        /* fr unit can be used for grid-rows and grid-columns values. It stands for “fraction of available space” */
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

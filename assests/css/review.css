@@ -1,0 +1,151 @@
+.reviewDisplay{
+    width: 100%;
+    height: 70vh;
+    background: BLACK;
+    position: relative;
+}
+.veiw-box{
+    width: 72%;
+    height: 100%;
+    border-radius: 220px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;    
+}
+#testimonials{
+    display: flex;
+    transition: 0.5s;
+}
+.user{
+    height: 100%;
+    width: 57vw;
+    text-align: center;
+    padding: 20px 70px;
+    box-sizing: content-box;
+    background: white;
+    border-radius: 250px;
+    box-shadow: 0px 0px 30px 5px #636360;
+    position: relative;
+}
+
+.space{
+    margin: 0 70px;
+}
+
+.user p{
+    font-size: 1rem;
+    color: black;
+    line-height: 2.5rem;
+    /* margin: 60px 0 30px; */
+}
+.user h3{
+    font-size: 3rem;
+    font-family: 'Birthstone', cursive;
+    color: #c9b040;
+    text-shadow: 1px 1px #927e26;
+}
+.controls{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.controls span{
+    width: 15px;
+    height: 15px;
+    background: #c9b040;
+    border-radius: 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.active_review{
+    width: 45px !important;
+}
+ 
+
+@media (max-width: 1111px){
+    .veiw-box{
+        width: 70%;
+        height: 50%;
+    }
+    .user{
+        height: 100%;
+        width: 55vw;   
+    }
+    .user p{
+        font-size: 0.9rem;
+        line-height: 2.2rem;
+    }
+    .user h3{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 995px){
+    .user{
+        width: 50vw;   
+    }
+    .user p{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .user h3{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 770px){
+    .veiw-box{
+        width: 90%;
+        height: 80%;
+    }
+    .user{
+        height: 30vh;
+        width: 65vw;
+
+    }
+}
+
+ @media (max-width: 600px) {
+    .veiw-box{
+        width: 90vw;
+        height: 80%;
+    }    
+    .user{
+        width: 75vw;
+        height: 40vh;
+    }
+
+    .user p{
+        font-size: 0.7rem;
+        line-height: 1.5rem;
+    }
+    .user h3{
+        font-size: 2rem;
+    }
+}
+    @media (max-width: 550px) {
+    .veiw-box{
+        width: 100vw;
+        height: 60%;
+        border-radius: 100px;
+    }    
+    .user{
+        width: 85vw;
+        height: 30vh;
+        padding: 0px 15px;
+    }
+
+    .user p{
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+    .user h3{
+        font-size: 1.5rem;
+    }
+}

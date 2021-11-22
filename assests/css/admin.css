@@ -1,0 +1,51 @@
+.AddProduct{
+    margin: 1rem 5rem;
+    background: white;
+    box-sizing: content-box;
+}
+
+.AddProduct form {
+    width: 100%;
+    margin: 30px;
+}
+
+.AddProduct h3 a {
+    text-decoration: none;
+}
+.AddProduct .form-control {
+    padding-bottom: 4px;
+}
+
+.AddProduct form .box {
+    font-size: 14px;
+    border: 1px solid black;
+  }
+
+.AddProduct input {
+    height: 40px;
+    margin: 8px 0;
+}
+
+.AddProduct .btn {
+    background: var(--gold);
+    border: 0;
+    padding: 7px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}  
+
+.AddProduct .btn:hover {
+    background: black;
+    color: white;
+}
+
+@media (max-width:600px) {
+    .AddProduct {
+        margin: 3rem;
+    }
+    
+    .AddProduct form {
+        margin: 10px;
+    }   
+}

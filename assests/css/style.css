@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Festive&family=Fredericka+the+Great&family=Niconne&family=Oleo+Script&family=Pinyon+Script&family=Rye&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+main {
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* ******************************** navbar ****************************** */
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 1000;
+}
+.navbar {
+    padding: 1% 5%;
+}
+
+.navbar .brand{
+    font-size: 1.5rem;
+}
+
+header ul li a{
+    font-size: 20px;
+    color: white !important;
+}
+
+header nav .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+header nav .icons a i{
+    color: white !important;
+}
+
+header li:hover a {
+    text-decoration: underline 3px var(--gold) !important;
+}
+
+header i:hover, header label:hover, header a i:hover {
+    color: var(--gold) !important;
+}
+
+header .dropdown-menu li a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+header .dropdown-menu li:hover a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+
+@media (max-width:1024px){
+    .navbar {
+        padding: 5%;
+    }
+    .navbar .brand {
+        font-size: 1rem;
+    }
+}
+
+/* ******************************** search bar ********************************** */
+header .search-bar-container{
+    position: absolute;
+    top:100%; 
+    left: 0; 
+    right:0;
+    padding:1.5rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .search-bar-container.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  header .search-bar-container #search-bar{
+    width:100%;
+    padding:1rem;
+    text-transform: none;
+    color:black;
+    font-size: .8rem;
+    border-radius: .5rem;
+  }
+  
+  header .search-bar-container label{
+    color:#fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
+  }
+  /* ************************************ login *************************************** */
+
+  .login-form-container, .signup-form-container, .forget-password-container,.otp-container, .reset-password-container {
+    position: fixed;
+    top:-500%; left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width:100%;
+    background:rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-form-container.active, .signup-form-container.active, .forget-password-container.active,.otp-container.active, .reset-password-container.active {
+    top:0;
+  }
+  
+  .login-form-container form, .signup-form-container form, .forget-password-container form, .otp-container form, .reset-password-container form{
+    margin: 5rem;
+    padding:1.5rem 5rem;
+    border-radius: .5rem;
+    background:#fff;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-form-container form h3, .signup-form-container form h3, .forget-password-container form h3, .otp-container form h3, .reset-password-container form h3{
+    font-size: 2rem;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .login-form-container form .box, .signup-form-container form .box, .forget-password-container .box, .otp-container form .box, .reset-password-container form .box{
+    width:80%;
+    height: 50%;
+    padding:1rem;
+    font-size: 1rem;
+    color:#333;
+    margin:.6rem 0;
+    border: 2px solid black;
+    text-transform: none;
+  }
+    
+  .login-form-container form .btn, .signup-form-container form .btn, .forget-password-container form .btn, .otp-container form .btn, .reset-password-container form .btn{
+    width: auto;
+    height: auto;
+    margin-top: 5% ;
+    margin-bottom: 5%;
+    box-sizing: content-box;
+    background-color:var(--gold);
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  
+  .login-form-container form p, .signup-form-container form p{
+    padding:.2rem 0;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .login-form-container form p a, .signup-form-container form p a{
+    color:var(--gold);
+  }
+  
+  .login-form-container form p a:hover, .signup-form-container form p a:hover{
+    color:#333;
+  }
+  
+  .login-form-container #form-close, .signup-form-container #signup-close, .forget-password-container #forget-close,.otp-container #otp-close, .reset-password-container #reset-close{
+    position: absolute;
+    top:1.5rem; right:2.5rem;
+    font-size: 2rem;
+    color:#fff;
+    cursor: pointer;
+  }
+
+ @media (max-width:600px) {
+      
+    .login-form-container form h3, .signup-form-container form h3, .forget-password-container form h3, .otp-container form h3, .reset-password-container form h3{
+       font-size: 1.3rem;
+       padding: .5rem;
+    }
+
+    .login-form-container form .box, .signup-form-container form .box, .forget-password-container .box, .otp-container form .box, .reset-password-container form .box{
+       width:100%;
+       height: 100%;   
+       padding: 2px;
+    }
+    .login-form-container form .btn, .signup-form-container form .btn, .forget-password-container form .btn, .otp-container form .btn, .reset-password-container form .btn{
+      font-size: .8rem;
+      padding: 5px 10px;
+    }
+    .login-form-container form p, .signup-form-container form p{
+       font-size: .6rem;
+    }
+ }
+
+
+/* ******************************** home ********************************** */
+#home .carousel {
+    width:100vw;
+    height: 100vh;
+}
+#home img{
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width:600px){
+    ::-webkit-scrollbar {
+        width: 0;  
+        background: transparent;  
+    }
+    #home img {
+        height:100vh;
+    }
+}
+
+/* ******************************* services*********************************** */
+#services .icon {
+    color:rgb(145, 144, 144);
+}
+
+/* *********************************Vintage heading *********************************** */
+
+.vintage-heading{
+    font-family: 'Birthstone', cursive;
+    color:  var(--gold);
+    text-shadow: 1.5px 1.5px #927e26;
+}
+
+/* ********************************** topcategory *************************************** */
+
+#topcategory .category {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 1.5px 1.5px #927e26;
+}
+
+/* ***************************** Product name hover ******************************* */
+
+.product-name:hover{
+    color: #927e26;
+}
+
+
+
+/* ******************************* deals **************************************** */
+
+.deal .box-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.deal .box-container .box{
+    /* all the elements will grow to take up an equal portion of the parent element */
+    /* flex: [flex-grow] [flex-shrink] [flex-basis] */
+    /* flex: [max] [min] [ideal size] */
+    flex:1 1 40rem;
+    height: 25rem;
+    margin:2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.deal .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.deal .box-container .box .content{
+    position: absolute;
+    top:55%; left: 3rem;
+    transform:translateY(-50%);
+}
+
+.deal .box-container .box .content h3{
+    font-size: 3rem;
+    color:#fff;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.deal .box-container .box .content p{
+    font-size: 2rem;
+    color:#fff;
+}
+
+@media (max-width:600px) {
+    .deal .box-container .box .content h3{
+        font-size: 2rem;
+    }
+    .deal .box-container .box .content p{
+        font-size: 1.5rem
+    }
+}
+
+.deal .box-container .box .content .btn{
+    margin:1rem 0;
+}
+.btn{
+    height: 4rem;
+    width: 14rem;
+    background: var(--gold);
+    color:#fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border:none;
+    outline: none;
+}
+
+/* ****************************** footer ************************************* */
+.footer{
+    box-sizing: content-box;
+    background: var(--gray);
+    margin:0;
+    padding:0;
+    color:black;
+  }
+  
+  .footer a {
+      color:black;
+  }
+
+  .footer .credit, .footer h3 {
+      font-size: 1.5rem;
+  }
+ 
+  @media (max-width:540px) {
+      .footer .boxx {
+          font-size: .8rem;
+      }
+    .footer .credit, .footer h3 {
+        font-size: 1rem;
+    }  
+  }
+
+  .footer .boxx {
+    font-size: .9rem;
+  }
+
+  .footer h1 {
+      font-size: 1rem !important;
+  }
+
+  .footer i:hover{
+      color: var(--gold);
+  }
+
+  @media (max-width:800px) {
+      .footer h1{
+          font-size: .6rem !important;
+      }
+  }
+
+ 
